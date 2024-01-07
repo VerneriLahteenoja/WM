@@ -1,0 +1,8 @@
+-- Database Structure
+
+Profile Table
+    # A single profile has a one to many relation with the weight table
+    # Consists of a ID Primary Key and a profile name
+
+Weight Table
+    # Consists of ID, weight value, date, profile ID as Foreign Key
