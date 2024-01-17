@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>283</width>
-    <height>335</height>
+    <width>555</width>
+    <height>455</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>281</width>
-      <height>291</height>
+      <width>551</width>
+      <height>411</height>
      </rect>
     </property>
     <property name="currentIndex">
@@ -34,9 +34,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>60</y>
+        <y>170</y>
         <width>251</width>
-        <height>181</height>
+        <height>191</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -68,65 +68,63 @@
         </property>
        </widget>
       </widget>
-      <widget class="QSplitter" name="splitter_3">
+      <widget class="QPushButton" name="addWeightPushButton">
        <property name="geometry">
         <rect>
          <x>10</x>
          <y>10</y>
-         <width>65</width>
-         <height>43</height>
+         <width>89</width>
+         <height>25</height>
         </rect>
        </property>
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
+       <property name="text">
+        <string>Add</string>
        </property>
-       <widget class="QLabel" name="label_2">
-        <property name="text">
-         <string>Weight</string>
-        </property>
-       </widget>
-       <widget class="QDoubleSpinBox" name="generalWeightDoubleSpinBox"/>
       </widget>
-      <widget class="QSplitter" name="splitter_4">
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>49</y>
+         <width>49</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Weight</string>
+       </property>
+      </widget>
+      <widget class="QDoubleSpinBox" name="generalWeightDoubleSpinBox">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>65</width>
+         <height>22</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_3">
        <property name="geometry">
         <rect>
          <x>120</x>
-         <y>10</y>
-         <width>102</width>
-         <height>43</height>
+         <y>49</y>
+         <width>33</width>
+         <height>17</height>
         </rect>
        </property>
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>Date</string>
-        </property>
-       </widget>
-       <widget class="QDateEdit" name="generalWeightDateEdit"/>
-      </widget>
-     </widget>
-     <widget class="QSplitter" name="splitter">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>117</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label">
        <property name="text">
-        <string>Profile:</string>
+        <string>Date</string>
        </property>
       </widget>
-      <widget class="QLabel" name="generalProfileLabel">
-       <property name="text">
-        <string>-</string>
+      <widget class="QDateEdit" name="generalWeightDateEdit">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>70</y>
+         <width>102</width>
+         <height>22</height>
+        </rect>
        </property>
       </widget>
      </widget>
@@ -134,13 +132,160 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>30</y>
+        <y>40</y>
         <width>89</width>
         <height>25</height>
        </rect>
       </property>
       <property name="text">
        <string>Change</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_2">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>10</y>
+        <width>261</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_10">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>101</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>General Info:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_15">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>210</y>
+         <width>91</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Condition:</string>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="progressBar">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>240</y>
+         <width>241</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="value">
+        <number>24</number>
+       </property>
+      </widget>
+      <widget class="QSplitter" name="splitter_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>53</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>Height:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="text">
+         <string>Weight:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="text">
+         <string>Age:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="text">
+         <string>Sex:</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QSplitter" name="splitter_4">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>40</y>
+         <width>67</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <widget class="QLabel" name="genInfoHeightLabel">
+        <property name="text">
+         <string>0.0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="genInfoWeightLabel">
+        <property name="text">
+         <string>0.0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="genInfoAgeLabel">
+        <property name="text">
+         <string>0.0</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="genInfoSexLabel">
+        <property name="text">
+         <string>-</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>50</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Profile:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="generalProfileLabel">
+      <property name="geometry">
+       <rect>
+        <x>115</x>
+        <y>10</y>
+        <width>141</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>-</string>
       </property>
      </widget>
     </widget>
@@ -282,7 +427,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>283</width>
+     <width>555</width>
      <height>22</height>
     </rect>
    </property>
