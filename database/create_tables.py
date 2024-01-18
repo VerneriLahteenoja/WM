@@ -50,15 +50,18 @@ if __name__=="__main__":
     STATEMENTS = [
     """CREATE TABLE IF NOT EXISTS profile (
         id integer PRIMARY KEY,
-        name text NOT NULL
-    )""",
+        name text NOT NULL,
+        age integer NOT NULL,
+        height real NOT NULL,
+        sex text NOT NULL
+    );""",
     """CREATE TABLE IF NOT EXISTS weight (
         weight_id integer PRIMARY KEY,
         weight real NOT NULL,
         weight_date text NOT NULL,
         profile_id integer NOT NULL,
         FOREIGN KEY (profile_id) REFERENCES profile (id)
-    )"""
+    );"""
     ]
     
     main(STATEMENTS)
