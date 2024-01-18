@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="generalTab">
      <attribute name="title">
@@ -161,12 +161,12 @@
         <rect>
          <x>10</x>
          <y>10</y>
-         <width>101</width>
+         <width>151</width>
          <height>17</height>
         </rect>
        </property>
        <property name="text">
-        <string>General Info:</string>
+        <string>General Info (Latest):</string>
        </property>
       </widget>
       <widget class="QLabel" name="label_15">
@@ -182,7 +182,7 @@
         <string>Condition:</string>
        </property>
       </widget>
-      <widget class="QProgressBar" name="progressBar">
+      <widget class="QProgressBar" name="genConditionProgressBar">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -293,37 +293,6 @@
      <attribute name="title">
       <string>Edit</string>
      </attribute>
-     <widget class="QSplitter" name="splitter_5">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>50</y>
-        <width>161</width>
-        <height>171</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>Name:</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="editNameLineEdit"/>
-      <widget class="QLabel" name="label_5">
-       <property name="text">
-        <string>Weight:</string>
-       </property>
-      </widget>
-      <widget class="QDoubleSpinBox" name="editWeightDoubleSpinBox"/>
-      <widget class="QLabel" name="label_6">
-       <property name="text">
-        <string>Date:</string>
-       </property>
-      </widget>
-      <widget class="QDateEdit" name="editDateDateEdit"/>
-     </widget>
      <widget class="QSplitter" name="splitter_6">
       <property name="geometry">
        <rect>
@@ -346,6 +315,159 @@
         <string>Cancel</string>
        </property>
       </widget>
+     </widget>
+     <widget class="QDoubleSpinBox" name="editHeightDoubleSpinBox">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>150</y>
+        <width>81</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="maximum">
+       <double>300.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="editSexComboBox">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>150</y>
+        <width>86</width>
+        <height>25</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="editAgeSpinBox">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>90</y>
+        <width>44</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>110</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>60</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Age:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>120</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Height (cm):</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>120</y>
+        <width>67</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Sex:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>91</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Weight (kg):</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>44</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Name:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="editNameLineEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>142</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="maxLength">
+       <number>50</number>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="editWeightDoubleSpinBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>81</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <double>300.000000000000000</double>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>37</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Date:</string>
+      </property>
+     </widget>
+     <widget class="QDateEdit" name="editDateDateEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>210</y>
+        <width>102</width>
+        <height>26</height>
+       </rect>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="graphsTab">
