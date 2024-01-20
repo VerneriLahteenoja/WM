@@ -14,12 +14,17 @@ class MainWindow(QMainWindow):
         loadUi('WM_MainWindow.ui', self)
 
         # General tab
-        self.genChangeProfilePB: QPushButton = self.generalChageProfilePushButton
+        self.genChangeProfilePB: QPushButton = self.generalChangeProfilePushButton
         self.genSavePB: QPushButton = self.generalSavePushButton
         self.genClearPB: QPushButton = self.generalClearPushButton
         self.genAddWeightPB: QPushButton = self.genAddWeightPushButton
+        self.genAddWeightPB.clicked.connect(self.enableAddBox)
+        self.genCancelAddWeightPB: QPushButton = self.genCancelAddWeightPushButton
+        self.genCancelAddWeightPB.clicked.connect(self.cancelAddBox)
+
         self.genWeightDSB: QDoubleSpinBox = self.generalWeightDoubleSpinBox
         self.genWeightDE: QDateEdit = self.generalWeightDateEdit
+
         self.genConditionProgBar: QProgressBar = self.genConditionProgressBar
 
         # Current profile display
@@ -33,7 +38,7 @@ class MainWindow(QMainWindow):
 
         # Edit tab
         self.editPB: QPushButton = self.editPushButton
-        self.cancelPB: QPushButton = self.cancelPushButton
+        self.cancelPB: QPushButton = self.cancelEditPushButton
         self.editNameLE: QLineEdit = self.editNameLineEdit
         self.editAgeSB: QSpinBox = self.editAgeSpinBox
         self.editHeightDSB: QDoubleSpinBox = self.editHeightDoubleSpinBox
@@ -48,6 +53,29 @@ class MainWindow(QMainWindow):
         # Status Bar
         self.genStatusBar: QStatusBar = self.statusbar
 
+    def enableAddBox(self):
+        # Enable elements in add box and disable/hide add button
+        self.genWeightDSB.setEnabled(True)
+        self.genWeightDE.setEnabled(True)
+        self.genAddWeightPB.setEnabled(False)
+        self.genAddWeightPB.setVisible(False)
+        self.genCancelAddWeightPB.setEnabled(True)
+        self.genCancelAddWeightPB.setVisible(True)
+        self.genSavePB.setEnabled(True)
+        self.genClearPB.setEnabled(True)
+
+    def cancelAddBox(self):
+        # Disable elements in add box and disable/hide cancel button
+        self.genWeightDSB.setValue(0)
+        self.genWeightDE.setDate(QDate(2020, 1, 1))
+        self.genWeightDSB.setEnabled(False)
+        self.genWeightDE.setEnabled(False)
+        self.genAddWeightPB.setEnabled(True)
+        self.genAddWeightPB.setVisible(True)
+        self.genCancelAddWeightPB.setEnabled(False)
+        self.genCancelAddWeightPB.setVisible(False)
+        self.genSavePB.setEnabled(False)
+        self.genClearPB.setEnabled(False)
 if __name__=="__main__":
     app = QApplication(sys.argv)
     app.setStyle('Fusion')
