@@ -68,19 +68,6 @@
         </property>
        </widget>
       </widget>
-      <widget class="QPushButton" name="genAddWeightPushButton">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>10</y>
-         <width>89</width>
-         <height>25</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Add</string>
-       </property>
-      </widget>
       <widget class="QLabel" name="label_2">
        <property name="geometry">
         <rect>
@@ -126,6 +113,29 @@
          <height>22</height>
         </rect>
        </property>
+      </widget>
+      <widget class="QSplitter" name="splitter">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>231</width>
+         <height>25</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QPushButton" name="genAddWeightPushButton">
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="genCancelAddWeightPushButton">
+        <property name="text">
+         <string>Cancel</string>
+        </property>
+       </widget>
       </widget>
      </widget>
      <widget class="QPushButton" name="generalChangeProfilePushButton">
@@ -192,7 +202,10 @@
         </rect>
        </property>
        <property name="value">
-        <number>24</number>
+        <number>0</number>
+       </property>
+       <property name="format">
+        <string/>
        </property>
       </widget>
       <widget class="QSplitter" name="splitter_3">
