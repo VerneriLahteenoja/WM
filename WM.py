@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import (QMainWindow, QApplication,
                              QComboBox, QDateEdit, QLabel, 
                              QProgressBar, QLineEdit, 
                              QSpinBox, QStatusBar)
+from PyQt5.QtCore import QDate
 
 
 class MainWindow(QMainWindow):
@@ -26,7 +27,7 @@ class MainWindow(QMainWindow):
         self.genWeightDE: QDateEdit = self.generalWeightDateEdit
 
         self.genConditionProgBar: QProgressBar = self.genConditionProgressBar
-
+        self.genConditionProgBar.setRange(1, 100)
         # Current profile display
         self.genProfileLabel: QLabel = self.generalProfileLabel
         # Info Labels
@@ -52,6 +53,15 @@ class MainWindow(QMainWindow):
         
         # Status Bar
         self.genStatusBar: QStatusBar = self.statusbar
+
+        self.populateGeneralTab()
+
+    # GENERAL TAB
+    def populateGeneralTab(self):
+        dummyInfoData = ['John Doe', 180.0, 75.5, 30, 'Male'] #TODO: This will eventually be fetched from DB
+        self.cancelAddBox()
+        self.displayInfoBox([str(x) for x in dummyInfoData])
+        self.displayProgressBar()
 
     def changeProfile(self):
         pass
