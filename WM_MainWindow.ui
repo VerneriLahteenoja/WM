@@ -68,7 +68,7 @@
         </property>
        </widget>
       </widget>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="addWeightLabel">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -91,7 +91,7 @@
         </rect>
        </property>
       </widget>
-      <widget class="QLabel" name="label_3">
+      <widget class="QLabel" name="addWeightDateLabel">
        <property name="geometry">
         <rect>
          <x>120</x>
@@ -205,7 +205,7 @@
         <number>0</number>
        </property>
        <property name="format">
-        <string/>
+        <string>%v</string>
        </property>
       </widget>
       <widget class="QSplitter" name="splitter_3">
