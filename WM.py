@@ -71,6 +71,8 @@ class MainWindow(QMainWindow):
     # General <add> box
     def enableAddBox(self):
         # Enable elements in add box and disable/hide add button
+        self.weightLabel.setEnabled(True)
+        self.dateLabel.setEnabled(True)
         self.genWeightDSB.setEnabled(True)
         self.genWeightDE.setEnabled(True)
         self.genAddWeightPB.setEnabled(False)
@@ -82,6 +84,8 @@ class MainWindow(QMainWindow):
 
     def cancelAddBox(self):
         # Disable elements in add box and disable/hide cancel button
+        self.weightLabel.setEnabled(False)
+        self.dateLabel.setEnabled(False)
         self.genWeightDSB.setValue(0)
         self.genWeightDE.setDate(QDate(2020, 1, 1))
         self.genWeightDSB.setEnabled(False)
