@@ -23,6 +23,8 @@ class MainWindow(QMainWindow):
         self.genCancelAddWeightPB: QPushButton = self.genCancelAddWeightPushButton
         self.genCancelAddWeightPB.clicked.connect(self.cancelAddBox)
 
+        self.weightLabel: QLabel = self.addWeightLabel
+        self.dateLabel: QLabel = self.addWeightDateLabel
         self.genWeightDSB: QDoubleSpinBox = self.generalWeightDoubleSpinBox
         self.genWeightDE: QDateEdit = self.generalWeightDateEdit
 
