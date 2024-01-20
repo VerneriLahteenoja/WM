@@ -53,6 +53,10 @@ class MainWindow(QMainWindow):
         # Status Bar
         self.genStatusBar: QStatusBar = self.statusbar
 
+    def changeProfile(self):
+        pass
+
+    # General <add> box
     def enableAddBox(self):
         # Enable elements in add box and disable/hide add button
         self.genWeightDSB.setEnabled(True)
@@ -76,6 +80,21 @@ class MainWindow(QMainWindow):
         self.genCancelAddWeightPB.setVisible(False)
         self.genSavePB.setEnabled(False)
         self.genClearPB.setEnabled(False)
+
+    # General <info> box
+    def displayInfoBox(self, profileInfo: list):
+        self.genProfileLabel.setText(profileInfo[0])
+        self.genHeightLabel.setText(profileInfo[1])
+        self.genWeightLabel.setText(profileInfo[2])
+        self.genAgeLabel.setText(profileInfo[3])
+        self.genSexLabel.setText(profileInfo[4])
+
+    def displayProgressBar(self):
+        self.genConditionLabel.setText('N/A')
+        self.genConditionProgBar.setValue(50)
+
+
+
 if __name__=="__main__":
     app = QApplication(sys.argv)
     app.setStyle('Fusion')
