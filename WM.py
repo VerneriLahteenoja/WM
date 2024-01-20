@@ -110,6 +110,23 @@ class MainWindow(QMainWindow):
         self.genConditionProgBar.setValue(50)
 
 
+    # EDIT TAB
+    def populateEditTab(self):
+        pass
+
+    def saveEdits(self):
+        pass
+
+    def cancelEdits(self):
+        pass
+
+    # GRAPH TAB
+    def populateGraphTab(self):
+        pass
+
+    def displayGraph(self):
+        pass
+
 
 if __name__=="__main__":
     app = QApplication(sys.argv)
