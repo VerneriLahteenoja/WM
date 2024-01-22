@@ -30,7 +30,7 @@ class MainWindow(QMainWindow):
         self.genWeightDE: QDateEdit = self.generalWeightDateEdit
 
         self.genConditionProgBar: QProgressBar = self.genConditionProgressBar
-        self.genConditionProgBar.setRange(1, 100)
+        self.genConditionProgBar.setRange(1, 50)
         # Current profile display
         self.genProfileLabel: QLabel = self.generalProfileLabel
         # Info Labels
@@ -64,6 +64,7 @@ class MainWindow(QMainWindow):
         dummyInfoData = ['John Doe', 180.0, 75.5, 30, 'Male'] #TODO: This will eventually be fetched from DB
         self.cancelAddBox()
         self.displayInfoBox([str(x) for x in dummyInfoData])
+        self.genConditionProgBar.setValue(25)
         self.displayProgressBar()
 
     def changeProfile(self):
@@ -107,9 +108,15 @@ class MainWindow(QMainWindow):
         self.genSexLabel.setText(profileInfo[4])
 
     def displayProgressBar(self):
+        conditionValue = self.genConditionProgBar.value()
         self.genConditionLabel.setText('N/A')
-        self.genConditionProgBar.setValue(50)
-
+        if conditionValue < 18.5:
+            self.genConditionLabel.setText('Under healthy BMI')
+        elif conditionValue > 25:
+            self.genConditionLabel.setText('Over healthy BMI')
+        else:
+            self.genConditionLabel.setText('Healthy')
+        
 
     # EDIT TAB
     def populateEditTab(self):
