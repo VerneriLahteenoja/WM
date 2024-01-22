@@ -13,6 +13,7 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
 
         loadUi('WM_MainWindow.ui', self)
+        self.setFixedSize(550, 410)
 
         # General tab
         self.genChangeProfilePB: QPushButton = self.generalChangeProfilePushButton
